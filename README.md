@@ -89,6 +89,8 @@ Buscamos el proyecto donde clonamos el repositorio Y damos click en OPEN "PROTEC
 ![OPEN PROJECT](https://user-images.githubusercontent.com/69724829/217066622-7df9ee4c-4042-4a03-9863-06de3f3e80aa.jpg)
 
 
+En este punto solo debes dar click en RUN y ha disfrutar... espero que sea de su agrado y quedo atento a comentarios y observaciones.
 
+![image](https://user-images.githubusercontent.com/69724829/217067660-da114ce2-89e7-4759-b216-61003e6fac0b.png)
 
 
