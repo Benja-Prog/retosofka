@@ -31,10 +31,13 @@ https://netbeans.apache.org/
 
 Con todo listo en materia de descargas y sus respectivas instalaciones, vamos ahora a clonar el repositorio para acceder a los que es el proyecto en un par de sencillos pasos.
 
-1. Ingresamos al link del respositorio https://github.com/Benja-Prog/retosofka.git
-2. Copiamos Copiamos el link.
-3. Abrimos un terminal de windows o cualquiera que sea su sistema operativo.
+1. Copiamos el link con el que entramos a este repositorio https://github.com/Benja-Prog/retosofka.git
 
+2. Entramos a la carpera donde queremos copiar el repositorio, damos click derecho y abrimos donde dice "Abrir en terminal".
+![abrir terminal](https://user-images.githubusercontent.com/69724829/217053876-3375ed76-b2c3-4f53-b03a-69b87d7adc5c.jpg)
+
+3. Una vez en el terminal copia lo siguiente. "git clone https://github.com/Benja-Prog/retosofka.git" por supuesto sin comillas y das enter.
+4. 
 
 
 
