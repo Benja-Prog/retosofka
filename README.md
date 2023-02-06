@@ -45,6 +45,12 @@ Con todo listo en materia de descargas y sus respectivas instalaciones, vamos ah
 
 ![listo el repo](https://user-images.githubusercontent.com/69724829/217056410-d11c51d3-1531-4996-ba11-ae1da3f48319.jpg)
 
+5. Eso indica que el proyecto ya esta en la carpeta que ha seleccionado y es hora de abrirlo en netbeans, pero antes vamos a crear la base de datos.
+
+En este link dejaré el archivo de la base de datos comprimido en rar, solo hay que descargarlo y descomprimir
+https://drive.google.com/file/d/1mRR-RP7tuqiYNcewBmJVa-XIueFfcPA9/view?usp=sharing
+
+![base de datos](https://user-images.githubusercontent.com/69724829/217058215-00530b00-58df-4e5a-a0df-e3245f1365e6.jpg)
 
 
 
