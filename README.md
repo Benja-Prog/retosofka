@@ -70,6 +70,15 @@ Si todo Salio bien, debe haber quedado la base de datos con sus respectivas tabl
 
 ![base de datos lista](https://user-images.githubusercontent.com/69724829/217062592-2effed7c-297d-458d-b6f2-ec9f5370a8e3.jpg)
 
+Antes de abrir el proyecto en netbeans, vamos a necesitar tener instalado tambien el XAMPP, esta herramienta nos permitirá tener un gestior de bases de datos para MySQL en nuestro equipo.
+
+aqui esta en link de descarga: https://www.apachefriends.org/es/index.html 
+
+![xampp](https://user-images.githubusercontent.com/69724829/217063826-72e130ac-b362-4949-9984-1c99e6624177.jpg)
+
+Cuando se descarga y se ejecuta se ve asi... además debe tener activadas las primeras don funciones APACHE Y MySQL.
+
+![xampp activo](https://user-images.githubusercontent.com/69724829/217065086-7770c33b-29dc-4965-a820-d1f421e68502.jpg)
 
 
 
