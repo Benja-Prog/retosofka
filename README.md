@@ -89,8 +89,13 @@ Buscamos el proyecto donde clonamos el repositorio Y damos click en OPEN "PROTEC
 ![OPEN PROJECT](https://user-images.githubusercontent.com/69724829/217066622-7df9ee4c-4042-4a03-9863-06de3f3e80aa.jpg)
 
 
-En este punto solo debes dar click en RUN y ha disfrutar... espero que sea de su agrado y quedo atento a comentarios y observaciones.
+En este punto solo debes dar click en RUN y listo... el proyecto está en marcha.
 
-![image](https://user-images.githubusercontent.com/69724829/217067660-da114ce2-89e7-4759-b216-61003e6fac0b.png)
+![Abrir proyecto en netbeans](https://user-images.githubusercontent.com/69724829/217067935-a0411a82-5b32-4d5a-b771-689c6fee4430.jpg)
+
+
+Este es el menú principal de este proyecto listo para cacharrear... Quedo atento a observaciones y crítica constructivas :)
+
+![proyecto](https://user-images.githubusercontent.com/69724829/217068672-f32c1495-5dbf-434c-8178-4ed1fe48789a.jpg)
 
 
