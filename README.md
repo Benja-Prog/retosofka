@@ -80,6 +80,14 @@ Cuando se descarga y se ejecuta se ve asi... además debe tener activadas las pr
 
 ![xampp activo](https://user-images.githubusercontent.com/69724829/217065086-7770c33b-29dc-4965-a820-d1f421e68502.jpg)
 
+Ahora si Abrimos el Netbeans y vamos a abrir tambien un proyecto "OPEN PROJECT"
+
+![Abrir proyecto](https://user-images.githubusercontent.com/69724829/217065987-3c3b1355-417b-4c1f-8be6-8adc74c8a589.jpg)
+
+Buscamos el proyecto donde clonamos el repositorio Y damos click en OPEN "PROTECT"
+
+![OPEN PROJECT](https://user-images.githubusercontent.com/69724829/217066622-7df9ee4c-4042-4a03-9863-06de3f3e80aa.jpg)
+
 
 
 
