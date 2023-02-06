@@ -1,14 +1,14 @@
 
 package vistas;
 
-import navespacialsofka.ConectorDB;
+import Modelo.ConectorDB;
 import java.sql.Connection;
 import java.awt.Color;
 import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
 
 public class FormularioTripuladas extends javax.swing.JPanel {
-
+        //Instanciamos nuestro Objeto ConectorDB 
         ConectorDB cc = new ConectorDB();
         Connection con = cc.conexion();
         
@@ -20,7 +20,7 @@ public class FormularioTripuladas extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ContenidoCrearTri = new javax.swing.JPanel();
+        jTextNPasajeros = new javax.swing.JPanel();
         Matricula = new javax.swing.JLabel();
         jTextMatricula = new javax.swing.JTextField();
         Nombre = new javax.swing.JLabel();
@@ -29,8 +29,8 @@ public class FormularioTripuladas extends javax.swing.JPanel {
         jTextPeso = new javax.swing.JTextField();
         Combustible = new javax.swing.JLabel();
         jTextCombustible = new javax.swing.JTextField();
-        Empuje = new javax.swing.JLabel();
-        jTextEmpuje = new javax.swing.JTextField();
+        Tripulantes = new javax.swing.JLabel();
+        jTextTripulantes = new javax.swing.JTextField();
         Velocidad = new javax.swing.JLabel();
         jTextVelocidad = new javax.swing.JTextField();
         BotonCrear = new javax.swing.JPanel();
@@ -40,7 +40,7 @@ public class FormularioTripuladas extends javax.swing.JPanel {
         TPais = new javax.swing.JLabel();
         jTextTPais = new javax.swing.JTextField();
 
-        ContenidoCrearTri.setBackground(new java.awt.Color(0, 0, 153));
+        jTextNPasajeros.setBackground(new java.awt.Color(0, 0, 153));
 
         Matricula.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         Matricula.setForeground(new java.awt.Color(255, 255, 255));
@@ -98,17 +98,22 @@ public class FormularioTripuladas extends javax.swing.JPanel {
             }
         });
 
-        Empuje.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        Empuje.setForeground(new java.awt.Color(255, 255, 255));
-        Empuje.setText("Empuje:");
+        Tripulantes.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        Tripulantes.setForeground(new java.awt.Color(255, 255, 255));
+        Tripulantes.setText("N° Tripulantes:");
 
-        jTextEmpuje.setBackground(new java.awt.Color(0, 0, 153));
-        jTextEmpuje.setForeground(new java.awt.Color(204, 204, 204));
-        jTextEmpuje.setText("Ingrese el Empuje");
-        jTextEmpuje.setBorder(null);
-        jTextEmpuje.addMouseListener(new java.awt.event.MouseAdapter() {
+        jTextTripulantes.setBackground(new java.awt.Color(0, 0, 153));
+        jTextTripulantes.setForeground(new java.awt.Color(204, 204, 204));
+        jTextTripulantes.setText("Ingrese # de tripulantes");
+        jTextTripulantes.setBorder(null);
+        jTextTripulantes.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jTextEmpujeMousePressed(evt);
+                jTextTripulantesMousePressed(evt);
+            }
+        });
+        jTextTripulantes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextTripulantesActionPerformed(evt);
             }
         });
 
@@ -189,106 +194,109 @@ public class FormularioTripuladas extends javax.swing.JPanel {
             }
         });
 
-        javax.swing.GroupLayout ContenidoCrearTriLayout = new javax.swing.GroupLayout(ContenidoCrearTri);
-        ContenidoCrearTri.setLayout(ContenidoCrearTriLayout);
-        ContenidoCrearTriLayout.setHorizontalGroup(
-            ContenidoCrearTriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ContenidoCrearTriLayout.createSequentialGroup()
-                .addGap(292, 292, 292)
-                .addComponent(BotonCrear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(ContenidoCrearTriLayout.createSequentialGroup()
+        javax.swing.GroupLayout jTextNPasajerosLayout = new javax.swing.GroupLayout(jTextNPasajeros);
+        jTextNPasajeros.setLayout(jTextNPasajerosLayout);
+        jTextNPasajerosLayout.setHorizontalGroup(
+            jTextNPasajerosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jTextNPasajerosLayout.createSequentialGroup()
                 .addGap(55, 55, 55)
-                .addGroup(ContenidoCrearTriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ContenidoCrearTriLayout.createSequentialGroup()
-                        .addGroup(ContenidoCrearTriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(ContenidoCrearTriLayout.createSequentialGroup()
-                                .addGroup(ContenidoCrearTriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(ContenidoCrearTriLayout.createSequentialGroup()
+                .addGroup(jTextNPasajerosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jTextNPasajerosLayout.createSequentialGroup()
+                        .addGroup(jTextNPasajerosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jTextNPasajerosLayout.createSequentialGroup()
+                                .addGroup(jTextNPasajerosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jTextNPasajerosLayout.createSequentialGroup()
                                         .addComponent(Matricula)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jTextMatricula, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(ContenidoCrearTriLayout.createSequentialGroup()
+                                    .addGroup(jTextNPasajerosLayout.createSequentialGroup()
                                         .addComponent(Peso)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jTextPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(ContenidoCrearTriLayout.createSequentialGroup()
+                            .addGroup(jTextNPasajerosLayout.createSequentialGroup()
                                 .addComponent(TModelo)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextTmodelo)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                    .addGroup(ContenidoCrearTriLayout.createSequentialGroup()
-                        .addComponent(Empuje)
+                    .addGroup(jTextNPasajerosLayout.createSequentialGroup()
+                        .addComponent(Tripulantes)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextEmpuje, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextTripulantes, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(86, 86, 86)))
-                .addGroup(ContenidoCrearTriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ContenidoCrearTriLayout.createSequentialGroup()
+                .addGroup(jTextNPasajerosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jTextNPasajerosLayout.createSequentialGroup()
                         .addComponent(Velocidad)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jTextVelocidad, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(ContenidoCrearTriLayout.createSequentialGroup()
+                    .addGroup(jTextNPasajerosLayout.createSequentialGroup()
                         .addComponent(Nombre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(ContenidoCrearTriLayout.createSequentialGroup()
+                    .addGroup(jTextNPasajerosLayout.createSequentialGroup()
                         .addComponent(Combustible)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextCombustible, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(ContenidoCrearTriLayout.createSequentialGroup()
+                    .addGroup(jTextNPasajerosLayout.createSequentialGroup()
                         .addComponent(TPais)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextTPais, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jTextNPasajerosLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BotonCrear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(280, 280, 280))
         );
-        ContenidoCrearTriLayout.setVerticalGroup(
-            ContenidoCrearTriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ContenidoCrearTriLayout.createSequentialGroup()
+        jTextNPasajerosLayout.setVerticalGroup(
+            jTextNPasajerosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jTextNPasajerosLayout.createSequentialGroup()
                 .addGap(53, 53, 53)
-                .addGroup(ContenidoCrearTriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jTextNPasajerosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextMatricula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Matricula, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
-                .addGroup(ContenidoCrearTriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jTextNPasajerosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Peso, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Combustible, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextCombustible, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(ContenidoCrearTriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Empuje, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextEmpuje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jTextNPasajerosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Tripulantes, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextTripulantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Velocidad, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextVelocidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(ContenidoCrearTriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ContenidoCrearTriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jTextNPasajerosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jTextNPasajerosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(TPais, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jTextTPais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(ContenidoCrearTriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(jTextNPasajerosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(TModelo, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jTextTmodelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
+                .addGap(80, 80, 80)
                 .addComponent(BotonCrear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ContenidoCrearTri, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jTextNPasajeros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ContenidoCrearTri, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jTextNPasajeros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextMatriculaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextMatriculaMousePressed
+        
+        //Cuando damos click sobre el JTextFiel de los formularios la letra por defecto desaparecerá automaticamente
+        
         if(jTextMatricula.getText().equals("Ingrese la Matricula")){
             jTextMatricula.setText("");
             jTextMatricula.setForeground(Color. white);
@@ -309,9 +317,9 @@ public class FormularioTripuladas extends javax.swing.JPanel {
             jTextCombustible.setForeground(Color.gray);
         }
 
-        if(jTextEmpuje.getText().isEmpty()){
-            jTextEmpuje.setText("Ingrese el Empuje");
-            jTextEmpuje.setForeground(Color. gray);
+        if(jTextTripulantes.getText().isEmpty()){
+            jTextTripulantes.setText("Ingrese # de tripulantes");
+            jTextTripulantes.setForeground(Color. gray);
         }
 
         if (jTextVelocidad.getText().isEmpty()) {
@@ -352,9 +360,9 @@ public class FormularioTripuladas extends javax.swing.JPanel {
             jTextCombustible.setForeground(Color.gray);
         }
 
-        if(jTextEmpuje.getText().isEmpty()){
-            jTextEmpuje.setText("Ingrese el Empuje");
-            jTextEmpuje.setForeground(Color. gray);
+        if(jTextTripulantes.getText().isEmpty()){
+            jTextTripulantes.setText("Ingrese # de tripulantes");
+            jTextTripulantes.setForeground(Color. gray);
         }
 
         if (jTextVelocidad.getText().isEmpty()) {
@@ -395,9 +403,9 @@ public class FormularioTripuladas extends javax.swing.JPanel {
             jTextCombustible.setForeground(Color.gray);
         }
 
-        if(jTextEmpuje.getText().isEmpty()){
-            jTextEmpuje.setText("Ingrese el Empuje");
-            jTextEmpuje.setForeground(Color. gray);
+        if(jTextTripulantes.getText().isEmpty()){
+            jTextTripulantes.setText("Ingrese # de tripulantes");
+            jTextTripulantes.setForeground(Color. gray);
         }
 
         if (jTextVelocidad.getText().isEmpty()) {
@@ -438,9 +446,9 @@ public class FormularioTripuladas extends javax.swing.JPanel {
             jTextPeso.setForeground(Color.gray);
         }
 
-        if(jTextEmpuje.getText().isEmpty()){
-            jTextEmpuje.setText("Ingrese el Empuje");
-            jTextEmpuje.setForeground(Color. gray);
+        if(jTextTripulantes.getText().isEmpty()){
+            jTextTripulantes.setText("Ingrese # de tripulantes");
+            jTextTripulantes.setForeground(Color. gray);
         }
 
         if (jTextVelocidad.getText().isEmpty()) {
@@ -460,10 +468,10 @@ public class FormularioTripuladas extends javax.swing.JPanel {
 
     }//GEN-LAST:event_jTextCombustibleMousePressed
 
-    private void jTextEmpujeMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextEmpujeMousePressed
-        if(jTextEmpuje.getText().equals("Ingrese el Empuje")){
-            jTextEmpuje.setText("");
-            jTextEmpuje.setForeground(Color. white);
+    private void jTextTripulantesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextTripulantesMousePressed
+        if(jTextTripulantes.getText().equals("Ingrese # de tripulantes")){
+            jTextTripulantes.setText("");
+            jTextTripulantes.setForeground(Color. white);
         }
 
         if (jTextMatricula.getText().isEmpty()) {
@@ -501,7 +509,7 @@ public class FormularioTripuladas extends javax.swing.JPanel {
             jTextTPais.setForeground(Color.gray);
         }
 
-    }//GEN-LAST:event_jTextEmpujeMousePressed
+    }//GEN-LAST:event_jTextTripulantesMousePressed
 
     private void jTextVelocidadMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextVelocidadMousePressed
         if(jTextVelocidad.getText().equals("Ingrese Velocidad")){
@@ -529,9 +537,9 @@ public class FormularioTripuladas extends javax.swing.JPanel {
             jTextCombustible.setForeground(Color.gray);
         }
 
-        if(jTextEmpuje.getText().isEmpty()){
-            jTextEmpuje.setText("Ingrese el Empuje");
-            jTextEmpuje.setForeground(Color. gray);
+        if(jTextTripulantes.getText().isEmpty()){
+            jTextTripulantes.setText("Ingrese # de tripulantes");
+            jTextTripulantes.setForeground(Color. gray);
         }
 
         if (jTextTmodelo.getText().isEmpty()) {
@@ -545,7 +553,7 @@ public class FormularioTripuladas extends javax.swing.JPanel {
         }
 
     }//GEN-LAST:event_jTextVelocidadMousePressed
-
+    //Botón que permite ingresar datos a la tabla "Lanzadera" y limpiar los JTexField
     private void BotonCrearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonCrearMouseClicked
         insertarDatos();
         LimpiarFormulario();
@@ -587,9 +595,9 @@ public class FormularioTripuladas extends javax.swing.JPanel {
             jTextCombustible.setForeground(Color.gray);
         }
 
-        if(jTextEmpuje.getText().isEmpty()){
-            jTextEmpuje.setText("Ingrese el Empuje");
-            jTextEmpuje.setForeground(Color. gray);
+        if(jTextTripulantes.getText().isEmpty()){
+            jTextTripulantes.setText("Ingrese # de tripulantes");
+            jTextTripulantes.setForeground(Color. gray);
         }
 
         if (jTextVelocidad.getText().isEmpty()) {
@@ -629,9 +637,9 @@ public class FormularioTripuladas extends javax.swing.JPanel {
             jTextCombustible.setForeground(Color.gray);
         }
 
-        if(jTextEmpuje.getText().isEmpty()){
-            jTextEmpuje.setText("Ingrese el Empuje");
-            jTextEmpuje.setForeground(Color. gray);
+        if(jTextTripulantes.getText().isEmpty()){
+            jTextTripulantes.setText("Ingrese # de tripulantes");
+            jTextTripulantes.setForeground(Color. gray);
         }
 
         if (jTextVelocidad.getText().isEmpty()) {
@@ -645,9 +653,15 @@ public class FormularioTripuladas extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jTextTPaisMousePressed
 
+    private void jTextTripulantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextTripulantesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextTripulantesActionPerformed
+    
+    //Método que permite ingresar datos a la tabla "Lanzadera"
+    
     public void insertarDatos(){
         try {
-            String SQL =("INSERT INTO tripulada (matricula_id, nombre, peso, combustible, empuje, velocidad, modelo, pais) VALUES (?, ?, ?, ?, ?, ?, ?, ?) ");
+            String SQL =("INSERT INTO tripulada (matricula_id, nombre, peso, combustible, ntripulantes, velocidad, modelo, pais) VALUES (?, ?, ?, ?, ?, ?, ?, ?) ");
             
             PreparedStatement pst = con.prepareStatement(SQL);
             
@@ -655,7 +669,7 @@ public class FormularioTripuladas extends javax.swing.JPanel {
             pst.setString(2, jTextNombre.getText());
             pst.setString(3, jTextPeso.getText());
             pst.setString(4, jTextCombustible.getText());
-            pst.setString(5, jTextEmpuje.getText());
+            pst.setString(5, jTextTripulantes.getText());
             pst.setString(6, jTextVelocidad.getText());
             pst.setString(7, jTextTmodelo.getText());
             pst.setString(8, jTextTPais.getText());
@@ -668,12 +682,13 @@ public class FormularioTripuladas extends javax.swing.JPanel {
         }
     }
     
+    //Método para limpiar los JTextFiel del formulario
      public void LimpiarFormulario(){
         jTextMatricula.setText("");
         jTextNombre.setText("");
         jTextPeso.setText("");
         jTextCombustible.setText("");
-        jTextEmpuje.setText("");
+        jTextTripulantes.setText("");
         jTextVelocidad.setText(""); 
         jTextTmodelo.setText(""); 
         jTextTPais.setText("");
@@ -682,22 +697,22 @@ public class FormularioTripuladas extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BotonCrear;
     private javax.swing.JLabel Combustible;
-    private javax.swing.JPanel ContenidoCrearTri;
     private javax.swing.JLabel Crear;
-    private javax.swing.JLabel Empuje;
     private javax.swing.JLabel Matricula;
     private javax.swing.JLabel Nombre;
     private javax.swing.JLabel Peso;
     private javax.swing.JLabel TModelo;
     private javax.swing.JLabel TPais;
+    private javax.swing.JLabel Tripulantes;
     private javax.swing.JLabel Velocidad;
     private javax.swing.JTextField jTextCombustible;
-    private javax.swing.JTextField jTextEmpuje;
     private javax.swing.JTextField jTextMatricula;
+    private javax.swing.JPanel jTextNPasajeros;
     private javax.swing.JTextField jTextNombre;
     private javax.swing.JTextField jTextPeso;
     private javax.swing.JTextField jTextTPais;
     private javax.swing.JTextField jTextTmodelo;
+    private javax.swing.JTextField jTextTripulantes;
     private javax.swing.JTextField jTextVelocidad;
     // End of variables declaration//GEN-END:variables
 }

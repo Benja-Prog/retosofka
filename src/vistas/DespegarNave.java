@@ -36,7 +36,7 @@ public class DespegarNave extends javax.swing.JPanel {
         Titulo.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
         Titulo.setForeground(new java.awt.Color(255, 255, 255));
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Titulo.setText("¿QUE TIPO DE NAVE DESEA PROBAR?");
+        Titulo.setText("¿QUE TIPO DE NAVE DESEA LANZAR?");
         Cabezote.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 470, 70));
 
         BotonLanzadera.setBackground(new java.awt.Color(0, 0, 153));
@@ -172,7 +172,8 @@ public class DespegarNave extends javax.swing.JPanel {
 
         add(ContenidoLanzar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 296, -1, 540));
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    //Metodo que permite ir de una vista JFrame a otra vista JFrame dando click a un botón
     private void BotonLanzaderaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonLanzaderaMouseClicked
         
         this.setVisible(false);
@@ -180,7 +181,7 @@ public class DespegarNave extends javax.swing.JPanel {
         p.setVisible(true);        
         
     }//GEN-LAST:event_BotonLanzaderaMouseClicked
-
+    //Metodos para aplicar a los botones el efecto Tipo Hover.
     private void BotonLanzaderaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonLanzaderaMouseEntered
         BotonLanzadera.setBackground(Color.white);
         LanzarLan.setForeground(Color.black);
@@ -191,6 +192,7 @@ public class DespegarNave extends javax.swing.JPanel {
         LanzarLan.setForeground(Color.white);
     }//GEN-LAST:event_BotonLanzaderaMouseExited
 
+    //Metodo que permite ir de una vista JFrame a otra vista JFrame dando click a un botón
     private void BotonNoTripuladaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonNoTripuladaMouseClicked
        this.setVisible(false);
         MoverNoTripulada mnt= new MoverNoTripulada();
@@ -207,7 +209,7 @@ public class DespegarNave extends javax.swing.JPanel {
         BotonNoTripulada.setBackground(new Color(0,0,153));
         LanzarNoTri.setForeground(Color.white);
     }//GEN-LAST:event_BotonNoTripuladaMouseExited
-
+    //Metodo que permite ir de una vista JFrame a otra vista JFrame dando click a un botón
     private void BotonTripuladaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonTripuladaMouseClicked
         this.setVisible(false);
         MoverTripulada mt= new MoverTripulada();

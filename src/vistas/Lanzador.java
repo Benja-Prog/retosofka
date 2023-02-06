@@ -4,19 +4,20 @@ package vistas;
 import java.awt.BorderLayout;
 import java.sql.Connection;
 import java.awt.Color;
-import navespacialsofka.ConectorDB;
+import Modelo.ConectorDB;
 
 
 public class Lanzador extends javax.swing.JPanel {
-
+    //Instanciamos nuestro Objeto ConectorDB 
     ConectorDB cc = new ConectorDB();
     Connection con = cc.conexion();
     
     public Lanzador() {
         initComponents();
         
+        
         FormularioLanzadera fl = new FormularioLanzadera();
-        fl.setSize(760, 340);
+        fl.setSize(750, 430);
         fl.setLocation(0, 0);
         
         Contenido.removeAll();
@@ -133,7 +134,7 @@ public class Lanzador extends javax.swing.JPanel {
         Contenido.setLayout(ContenidoLayout);
         ContenidoLayout.setHorizontalGroup(
             ContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 750, Short.MAX_VALUE)
         );
         ContenidoLayout.setVerticalGroup(
             ContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -144,8 +145,10 @@ public class Lanzador extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Cabezote, javax.swing.GroupLayout.DEFAULT_SIZE, 750, Short.MAX_VALUE)
-            .addComponent(Contenido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(Contenido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(Cabezote, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,7 +181,7 @@ public class Lanzador extends javax.swing.JPanel {
 
     private void BotonVerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonVerMouseClicked
         VerNavesLanzaderas vnl = new VerNavesLanzaderas();
-        vnl.setSize(760, 340);
+        vnl.setSize(750, 430);
         vnl.setLocation(0, 0);
         
         Contenido.removeAll();
@@ -191,7 +194,7 @@ public class Lanzador extends javax.swing.JPanel {
 
     private void BotonCrearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonCrearMouseClicked
         FormularioLanzadera fl = new FormularioLanzadera();
-        fl.setSize(760, 340);
+        fl.setSize(750, 430);
         fl.setLocation(0, 0);
         
         Contenido.removeAll();

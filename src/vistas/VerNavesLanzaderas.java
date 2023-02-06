@@ -1,7 +1,7 @@
 
 package vistas;
 
-import navespacialsofka.ConectorDB;
+import Modelo.ConectorDB;
 import java.sql.Connection;
 import javax.swing.table.DefaultTableModel;
 import java.sql.ResultSet;
@@ -26,31 +26,17 @@ public class VerNavesLanzaderas extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        TablaLanzadera = new javax.swing.JTable();
         BotonBorrarNave = new javax.swing.JPanel();
         Crear = new javax.swing.JLabel();
         BotonActualizar = new javax.swing.JPanel();
         Actualizar = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        TablaLanzadera = new javax.swing.JTable();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 153));
-
-        jScrollPane1.setBackground(new java.awt.Color(51, 0, 153));
-
-        TablaLanzadera.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {},
-                {},
-                {},
-                {}
-            },
-            new String [] {
-
-            }
-        ));
-        jScrollPane1.setViewportView(TablaLanzadera);
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         BotonBorrarNave.setBackground(new java.awt.Color(0, 0, 0));
         BotonBorrarNave.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -87,6 +73,8 @@ public class VerNavesLanzaderas extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
+        jPanel1.add(BotonBorrarNave, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, -1, -1));
+
         BotonActualizar.setBackground(new java.awt.Color(0, 0, 0));
         BotonActualizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -122,30 +110,26 @@ public class VerNavesLanzaderas extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(145, 145, 145)
-                .addComponent(BotonBorrarNave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(102, 102, 102)
-                .addComponent(BotonActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(145, Short.MAX_VALUE))
-            .addComponent(jScrollPane1)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BotonBorrarNave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BotonActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(98, Short.MAX_VALUE))
-        );
+        jPanel1.add(BotonActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 30, -1, -1));
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 430));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 750, 170));
+
+        jScrollPane1.setBackground(new java.awt.Color(51, 0, 153));
+
+        TablaLanzadera.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane1.setViewportView(TablaLanzadera);
+
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 264));
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonBorrarNaveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonBorrarNaveMouseClicked

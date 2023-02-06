@@ -7,17 +7,17 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import navespacialsofka.ConectorDB;
+import Modelo.ConectorDB;
 
 
 public class BuscarTripuladas extends javax.swing.JPanel {
-
+        //Instanciamos nuestro Objeto ConectorDB 
         ConectorDB cc = new ConectorDB();
         Connection con = cc.conexion();
         
     public BuscarTripuladas() {
         initComponents();
-        
+        //Cuando ingresamos a la vista "BuscarLanzadera" mostrará automaticamente el contenido de la tabla "tripulada"
         mostrarDatos();
     }
 
@@ -113,16 +113,16 @@ public class BuscarTripuladas extends javax.swing.JPanel {
     }//GEN-LAST:event_jTextBuscarDatoKeyReleased
 
     private void jTextBuscarDatoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextBuscarDatoMousePressed
+       //Cuando damos click sobre el JTextFiel de buscador la letra por defecto desaparecerá automaticamente
         if(jTextBuscarDato.getText().equals("Ingrese Dato de la Nave")){
             jTextBuscarDato.setText("");
             jTextBuscarDato.setForeground(Color. white);
         }
     }//GEN-LAST:event_jTextBuscarDatoMousePressed
 
-
-    
+    //Metodo Mostrar Datos desde nuestra tabla "tripulada"
     public void mostrarDatos(){
-        String[] titulos = {"matricula_id", "nombre", "peso", "combustible", "empuje", "velocidad", "modelo", "pais"};
+        String[] titulos = {"matricula_id", "nombre", "peso", "combustible", "ntripulantes", "velocidad", "modelo", "pais"};
         String[] registros = new String[8];
         
         DefaultTableModel modelo = new DefaultTableModel(null, titulos);
@@ -138,7 +138,7 @@ public class BuscarTripuladas extends javax.swing.JPanel {
                 registros[1]=rs.getString("nombre");
                 registros[2]=rs.getString("peso");
                 registros[3]=rs.getString("combustible");   
-                registros[4]=rs.getString("empuje");
+                registros[4]=rs.getString("ntripulantes");
                 registros[5]=rs.getString("velocidad");
                 registros[6]=rs.getString("modelo");
                 registros[7]=rs.getString("pais");                
@@ -152,9 +152,9 @@ public class BuscarTripuladas extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Error al mostrar Datos" + e.getMessage());
         }
     }
-    
+    //Método Filtrar Datos - Para buscar datos alojados en nuestra tabla "lanzadera"
     public void filtrarDatos(String valor){
-        String[] titulos = {"matricula_id", "nombre", "peso", "combustible", "empuje", "velocidad", "modelo", "pais"};
+        String[] titulos = {"matricula_id", "nombre", "peso", "combustible", "ntripulantes", "velocidad", "modelo", "pais"};
         String[] registros = new String[8];
         
         DefaultTableModel modelo = new DefaultTableModel(null, titulos);
@@ -170,7 +170,7 @@ public class BuscarTripuladas extends javax.swing.JPanel {
                 registros[1]=rs.getString("nombre");
                 registros[2]=rs.getString("peso");
                 registros[3]=rs.getString("combustible");   
-                registros[4]=rs.getString("empuje");
+                registros[4]=rs.getString("ntripulantes");
                 registros[5]=rs.getString("velocidad");
                 registros[6]=rs.getString("modelo");
                 registros[7]=rs.getString("pais"); 

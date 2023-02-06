@@ -166,7 +166,7 @@ public class MoverNoTripulada extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        Panel.add(BotonLanzadera, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 500, 190, -1));
+        Panel.add(BotonLanzadera, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 500, 190, -1));
 
         NoTripulada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/No tripuladas-mini.png"))); // NOI18N
         Panel.add(NoTripulada, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 330, -1, 113));
@@ -202,8 +202,8 @@ public class MoverNoTripulada extends javax.swing.JFrame {
         Importante.setFont(new java.awt.Font("Roboto", 1, 10)); // NOI18N
         Importante.setForeground(new java.awt.Color(255, 255, 255));
         Importante.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Importante.setText("IMPORTANTE: Esta nave No Tripulada puede moverse por todo el terreno de marte, no vuela por lo tanto siempre debe estar en tierra, use las felchas para iniciar");
-        Panel.add(Importante, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 750, -1));
+        Importante.setText("IMPORTANTE: Esta nave No Tripulada puede moverse por todo marte, no vuelva, por lo tanto debe estar en tierra, use las flechas del teclado para iniciar");
+        Panel.add(Importante, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 730, 10));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

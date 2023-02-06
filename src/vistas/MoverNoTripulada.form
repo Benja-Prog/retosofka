@@ -190,7 +190,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="280" y="500" width="190" height="-1"/>
+              <AbsoluteConstraints x="270" y="500" width="190" height="-1"/>
             </Constraint>
           </Constraints>
 
@@ -287,11 +287,11 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="IMPORTANTE: Esta nave No Tripulada puede moverse por todo el terreno de marte, no vuela por lo tanto siempre debe estar en tierra, use las felchas para iniciar"/>
+            <Property name="text" type="java.lang.String" value="IMPORTANTE: Esta nave No Tripulada puede moverse por todo marte, no vuelva, por lo tanto debe estar en tierra, use las flechas del teclado para iniciar"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="470" width="750" height="-1"/>
+              <AbsoluteConstraints x="10" y="470" width="730" height="10"/>
             </Constraint>
           </Constraints>
         </Component>

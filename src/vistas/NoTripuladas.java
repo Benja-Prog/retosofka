@@ -6,12 +6,14 @@ import java.awt.Color;
 
 public class NoTripuladas extends javax.swing.JPanel {
 
-     
+    /**
+     * Creates new form NoTripulado
+     */
     public NoTripuladas() {
         initComponents();
         
         FormularioNoTripuladas fnt = new FormularioNoTripuladas();
-        fnt.setSize(760, 340);
+        fnt.setSize(750, 430);
         fnt.setLocation(0, 0);
         
         Contenido.removeAll();
@@ -166,7 +168,7 @@ public class NoTripuladas extends javax.swing.JPanel {
 
     private void BotonVerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonVerMouseClicked
         VerNavesNotripuladas vnnt = new VerNavesNotripuladas();
-        vnnt.setSize(760, 340);
+        vnnt.setSize(750, 430);
         vnnt.setLocation(0, 0);
         
         Contenido.removeAll();
@@ -178,7 +180,7 @@ public class NoTripuladas extends javax.swing.JPanel {
 
     private void BotonCrearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonCrearMouseClicked
         FormularioNoTripuladas fnt = new FormularioNoTripuladas();
-        fnt.setSize(760, 340);
+        fnt.setSize(750, 430);
         fnt.setLocation(0, 0);
         
         Contenido.removeAll();

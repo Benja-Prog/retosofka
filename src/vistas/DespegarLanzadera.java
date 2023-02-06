@@ -6,8 +6,9 @@ import java.awt.event.KeyEvent;
 
 
 public class DespegarLanzadera extends javax.swing.JFrame {
-
+    //Puntos para el movimiento de las naves
     int x, y;
+    //Puntos que permiten mover la ventana con el Mouse
     int xMouse, yMouse;
     
     public DespegarLanzadera() {
@@ -32,7 +33,7 @@ public class DespegarLanzadera extends javax.swing.JFrame {
         Lanzadera = new javax.swing.JLabel();
         Paisaje = new javax.swing.JLabel();
         header = new javax.swing.JPanel();
-        Importante = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -199,10 +200,10 @@ public class DespegarLanzadera extends javax.swing.JFrame {
 
         Panel.add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, -1));
 
-        Importante.setFont(new java.awt.Font("Roboto", 1, 10)); // NOI18N
-        Importante.setForeground(new java.awt.Color(255, 255, 255));
-        Importante.setText("IMPORTANTE: Esta nave Lanzadera solo puede moverse hacia arriba para despegar y hacia abajo para aterrizar, use las flechas arriba y Abajo.");
-        Panel.add(Importante, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, 660, -1));
+        jLabel1.setFont(new java.awt.Font("Roboto", 1, 10)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("IMPORTANTE: Esta nave Lanzadera solo puede moverse hacia arriba para despegar y hacia abajo para aterrizar, use las flechas arriba y Abajo.");
+        Panel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, 660, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -221,6 +222,9 @@ public class DespegarLanzadera extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void PanelKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PanelKeyPressed
+       
+        //Método que permite mover la nave con las fechas del teclado
+        
         x = Lanzadera.getX();
         y = Lanzadera.getY();
         System.out.println(Lanzadera.getLocation());
@@ -234,13 +238,13 @@ public class DespegarLanzadera extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelKeyPressed
 
     private void RegresarAlSistemaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegresarAlSistemaMouseClicked
-
+        //Boton que permite regresar al programa
         this.setVisible(false);
         Menu m= new Menu();
         m.setVisible(true);
         
     }//GEN-LAST:event_RegresarAlSistemaMouseClicked
-
+    //Metodos para aplicar a los botones el efecto Tipo Hover.
     private void RegresarAlSistemaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegresarAlSistemaMouseEntered
         RegresarAlSistema.setBackground(Color.white);
         Regresar.setForeground(Color.black);
@@ -308,9 +312,7 @@ public class DespegarLanzadera extends javax.swing.JFrame {
         yMouse = evt.getY();
     }//GEN-LAST:event_headerMousePressed
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -348,7 +350,6 @@ public class DespegarLanzadera extends javax.swing.JFrame {
     private javax.swing.JPanel BotonNoTripulada;
     private javax.swing.JPanel BotonTripulada;
     private javax.swing.JLabel Cerrar;
-    private javax.swing.JLabel Importante;
     private javax.swing.JLabel IraNoTripulada;
     private javax.swing.JLabel IraTripulada;
     private javax.swing.JLabel Lanzadera;
@@ -357,5 +358,6 @@ public class DespegarLanzadera extends javax.swing.JFrame {
     private javax.swing.JLabel Regresar;
     private javax.swing.JPanel RegresarAlSistema;
     private javax.swing.JPanel header;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

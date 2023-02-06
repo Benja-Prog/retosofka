@@ -1,7 +1,7 @@
 
 package vistas;
 
-import navespacialsofka.ConectorDB;
+import Modelo.ConectorDB;
 import java.sql.Connection;
 import java.awt.Color;
 import java.sql.PreparedStatement;
@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 
 public class FormularioLanzadera extends javax.swing.JPanel {
-
+        //Instanciamos nuestro Objeto ConectorDB  
         ConectorDB cc = new ConectorDB();
         Connection con = cc.conexion();
         
@@ -166,9 +166,9 @@ public class FormularioLanzadera extends javax.swing.JPanel {
         ContenidoCrearLanLayout.setHorizontalGroup(
             ContenidoCrearLanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ContenidoCrearLanLayout.createSequentialGroup()
+                .addGap(55, 55, 55)
                 .addGroup(ContenidoCrearLanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(ContenidoCrearLanLayout.createSequentialGroup()
-                        .addGap(55, 55, 55)
                         .addGroup(ContenidoCrearLanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Empuje)
                             .addGroup(ContenidoCrearLanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -194,7 +194,6 @@ public class FormularioLanzadera extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jTextVelocidad, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(ContenidoCrearLanLayout.createSequentialGroup()
-                        .addGap(76, 76, 76)
                         .addComponent(BotonCrear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(234, 234, 234)))
                 .addContainerGap(46, Short.MAX_VALUE))
@@ -220,9 +219,9 @@ public class FormularioLanzadera extends javax.swing.JPanel {
                     .addComponent(jTextEmpuje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Velocidad, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextVelocidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(71, 71, 71)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE)
                 .addComponent(BotonCrear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addGap(72, 72, 72))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -246,14 +245,16 @@ public class FormularioLanzadera extends javax.swing.JPanel {
         BotonCrear.setBackground(new Color(0,0,0));
         Crear.setForeground(Color.white);
     }//GEN-LAST:event_BotonCrearMouseExited
-
+    //Botón que permite ingresar datos a la tabla "Lanzadera"
     private void BotonCrearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonCrearMouseClicked
         insertarDatos();
-        LimpiarFormulario();
     }//GEN-LAST:event_BotonCrearMouseClicked
 
     private void jTextMatriculaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextMatriculaMousePressed
-         if(jTextMatricula.getText().equals("Ingrese la Matricula")){
+        
+        //Cuando damos click sobre el JTextFiel de los formularios la letra por defecto desaparecerá automaticamente
+        
+        if(jTextMatricula.getText().equals("Ingrese la Matricula")){
             jTextMatricula.setText("");
             jTextMatricula.setForeground(Color. white);
         }
@@ -445,7 +446,7 @@ public class FormularioLanzadera extends javax.swing.JPanel {
         }        
         
     }//GEN-LAST:event_jTextVelocidadMousePressed
-
+    //Método que permite ingresar datos a la tabla "Lanzadera"
     public void insertarDatos(){
         try {
             String SQL =("INSERT INTO lanzadera (matricula_id, nombre, peso, combustible, empuje, velocidad) VALUES (?, ?, ?, ?, ?, ?) ");
@@ -467,13 +468,15 @@ public class FormularioLanzadera extends javax.swing.JPanel {
         }
     }
     
-    public void LimpiarFormulario(){
+    //Método para limpiar los JTextFiel del formulario
+     public void LimpiarFormulario(){
         jTextMatricula.setText("");
         jTextNombre.setText("");
         jTextPeso.setText("");
         jTextCombustible.setText("");
         jTextEmpuje.setText("");
-        jTextVelocidad.setText("");                
+        jTextVelocidad.setText(""); 
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

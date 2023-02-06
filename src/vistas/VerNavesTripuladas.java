@@ -1,7 +1,7 @@
 
 package vistas;
 
-import navespacialsofka.ConectorDB;
+import Modelo.ConectorDB;
 import java.sql.Connection;
 import javax.swing.table.DefaultTableModel;
 import java.sql.ResultSet;
@@ -31,6 +31,8 @@ public class VerNavesTripuladas extends javax.swing.JPanel {
         Actualizar = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         TablaTripulada = new javax.swing.JTable();
+
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 153));
 
@@ -108,22 +110,24 @@ public class VerNavesTripuladas extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(143, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(146, 146, 146)
                 .addComponent(BotonBorrarNave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(101, 101, 101)
                 .addComponent(BotonActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(165, 165, 165))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(BotonActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BotonBorrarNave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
+
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 262, 750, 170));
 
         jScrollPane1.setBackground(new java.awt.Color(51, 0, 153));
 
@@ -140,22 +144,7 @@ public class VerNavesTripuladas extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(TablaTripulada);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jScrollPane1)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 260));
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonBorrarNaveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonBorrarNaveMouseClicked
@@ -187,7 +176,7 @@ public class VerNavesTripuladas extends javax.swing.JPanel {
     }//GEN-LAST:event_BotonActualizarMouseExited
 
     public void mostrarDatos(){
-        String[] titulos = {"matricula_id", "nombre", "peso", "combustible", "empuje", "velocidad", "modelo", "pais"};
+        String[] titulos = {"matricula_id", "nombre", "peso", "combustible", "ntripulantes", "velocidad", "modelo", "pais"};
         String[] registros = new String[8];
         
         DefaultTableModel modelo = new DefaultTableModel(null, titulos);
@@ -203,7 +192,7 @@ public class VerNavesTripuladas extends javax.swing.JPanel {
                 registros[1]=rs.getString("nombre");
                 registros[2]=rs.getString("peso");
                 registros[3]=rs.getString("combustible");   
-                registros[4]=rs.getString("empuje");
+                registros[4]=rs.getString("ntripulantes");
                 registros[5]=rs.getString("velocidad");
                 registros[6]=rs.getString("modelo");
                 registros[7]=rs.getString("pais");                
@@ -223,7 +212,7 @@ public class VerNavesTripuladas extends javax.swing.JPanel {
         int filaSeleccionada = TablaTripulada.getSelectedRow();
         
         try {
-            String SQL = "delete From tripulada where matricula_id=" + TablaTripulada.getValueAt(filaSeleccionada, 0);
+            String SQL = "delete From notripulada where matricula_id=" + TablaTripulada.getValueAt(filaSeleccionada, 0);
             
             Statement st = con.createStatement();
             

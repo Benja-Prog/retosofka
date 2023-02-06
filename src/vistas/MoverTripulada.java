@@ -14,7 +14,7 @@ public class MoverTripulada extends javax.swing.JFrame {
         
         Panel.setFocusable(true);
     }
-
+    
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -228,7 +228,7 @@ public class MoverTripulada extends javax.swing.JFrame {
         m.setVisible(true);
 
     }//GEN-LAST:event_RegresarAlSisMouseClicked
-
+     
     private void RegresarAlSisMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegresarAlSisMouseEntered
         RegresarAlSis.setBackground(Color.white);
         Regresar.setForeground(Color.black);

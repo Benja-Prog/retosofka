@@ -28,8 +28,6 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         Contenido = new javax.swing.JPanel();
-        header = new javax.swing.JPanel();
-        Cerrar = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         BotonLanzadera = new javax.swing.JPanel();
         Lanzadera = new javax.swing.JLabel();
@@ -43,7 +41,9 @@ public class Menu extends javax.swing.JFrame {
         BotonBuscar = new javax.swing.JPanel();
         Buscar = new javax.swing.JLabel();
         BotonProbarNaves = new javax.swing.JPanel();
-        Probar = new javax.swing.JLabel();
+        TexttProbarNaves = new javax.swing.JLabel();
+        header = new javax.swing.JPanel();
+        Cerrar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -63,52 +63,6 @@ public class Menu extends javax.swing.JFrame {
         );
 
         getContentPane().add(Contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 750, 770));
-
-        header.setBackground(new java.awt.Color(0, 0, 0));
-        header.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                headerMouseDragged(evt);
-            }
-        });
-        header.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                headerMousePressed(evt);
-            }
-        });
-
-        Cerrar.setBackground(new java.awt.Color(0, 0, 0));
-        Cerrar.setFont(new java.awt.Font("Roboto", 0, 36)); // NOI18N
-        Cerrar.setForeground(new java.awt.Color(255, 255, 255));
-        Cerrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Cerrar.setText("X");
-        Cerrar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CerrarMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                CerrarMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                CerrarMouseExited(evt);
-            }
-        });
-
-        javax.swing.GroupLayout headerLayout = new javax.swing.GroupLayout(header);
-        header.setLayout(headerLayout);
-        headerLayout.setHorizontalGroup(
-            headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerLayout.createSequentialGroup()
-                .addGap(0, 974, Short.MAX_VALUE)
-                .addComponent(Cerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        headerLayout.setVerticalGroup(
-            headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerLayout.createSequentialGroup()
-                .addComponent(Cerrar)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, 0, 1020, -1));
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -295,29 +249,76 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        Probar.setBackground(new java.awt.Color(0, 0, 0));
-        Probar.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        Probar.setForeground(new java.awt.Color(255, 255, 255));
-        Probar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Probar.setText("PROBAR NAVES");
+        TexttProbarNaves.setBackground(new java.awt.Color(0, 0, 0));
+        TexttProbarNaves.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        TexttProbarNaves.setForeground(new java.awt.Color(255, 255, 255));
+        TexttProbarNaves.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TexttProbarNaves.setText("PROBAR NAVES");
 
         javax.swing.GroupLayout BotonProbarNavesLayout = new javax.swing.GroupLayout(BotonProbarNaves);
         BotonProbarNaves.setLayout(BotonProbarNavesLayout);
         BotonProbarNavesLayout.setHorizontalGroup(
             BotonProbarNavesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Probar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+            .addComponent(TexttProbarNaves, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
         );
         BotonProbarNavesLayout.setVerticalGroup(
             BotonProbarNavesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BotonProbarNavesLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Probar)
+                .addComponent(TexttProbarNaves)
                 .addContainerGap())
         );
 
         jPanel1.add(BotonProbarNaves, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 740, 200, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 810));
+
+        header.setBackground(new java.awt.Color(0, 0, 0));
+        header.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                headerMouseDragged(evt);
+            }
+        });
+        header.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                headerMousePressed(evt);
+            }
+        });
+
+        Cerrar.setBackground(new java.awt.Color(0, 0, 0));
+        Cerrar.setFont(new java.awt.Font("Roboto", 0, 36)); // NOI18N
+        Cerrar.setForeground(new java.awt.Color(255, 255, 255));
+        Cerrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cerrar.setText("X");
+        Cerrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CerrarMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                CerrarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                CerrarMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout headerLayout = new javax.swing.GroupLayout(header);
+        header.setLayout(headerLayout);
+        headerLayout.setHorizontalGroup(
+            headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerLayout.createSequentialGroup()
+                .addContainerGap(974, Short.MAX_VALUE)
+                .addComponent(Cerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        headerLayout.setVerticalGroup(
+            headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerLayout.createSequentialGroup()
+                .addComponent(Cerrar)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -389,7 +390,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void BotonNtripuladaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonNtripuladaMouseClicked
         NoTripuladas nt = new NoTripuladas();
-        nt.setSize(760, 683);
+        nt.setSize(750, 770);
         nt.setLocation(0, 0);
         
         Contenido.removeAll();
@@ -421,12 +422,12 @@ public class Menu extends javax.swing.JFrame {
 
     private void BotonProbarNavesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonProbarNavesMouseEntered
         BotonProbarNaves.setBackground(Color.white);
-        Probar.setForeground(Color.black);
+        TexttProbarNaves.setForeground(Color.black);
     }//GEN-LAST:event_BotonProbarNavesMouseEntered
 
     private void BotonProbarNavesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonProbarNavesMouseExited
         BotonProbarNaves.setBackground(new Color(0,0,153));
-        Probar.setForeground(Color.white);
+        TexttProbarNaves.setForeground(Color.white);
     }//GEN-LAST:event_BotonProbarNavesMouseExited
 
     private void BotonBuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonBuscarMouseClicked
@@ -497,7 +498,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JPanel Contenido;
     private javax.swing.JLabel Lanzadera;
     private javax.swing.JLabel NTripulada;
-    private javax.swing.JLabel Probar;
+    private javax.swing.JLabel TexttProbarNaves;
     private javax.swing.JLabel Tripulada;
     private javax.swing.JPanel header;
     private javax.swing.JLabel jLabel4;
