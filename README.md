@@ -53,4 +53,16 @@ https://drive.google.com/file/d/1mRR-RP7tuqiYNcewBmJVa-XIueFfcPA9/view?usp=shari
 ![base de datos](https://user-images.githubusercontent.com/69724829/217058215-00530b00-58df-4e5a-a0df-e3245f1365e6.jpg)
 
 
+en phpMyAdmin o su gestor de base de datos para mysql, creamos la base de datos con el nombre de "navesofka" Sin Comillas, luego la señalamos y vamos a IMPORTAR.
+VER PASO 1 Y 2.
+
+![phpadmyn](https://user-images.githubusercontent.com/69724829/217060142-99b5dc38-96db-4534-9380-7540cb6bb8e5.jpg)
+
+Luego de esto en la próxima ventana vamos a dar click donde dice SELECCIONAR ARCHIVO.
+
+![CARGAR BASE DE DATOS](https://user-images.githubusercontent.com/69724829/217060981-a4984f7e-32bd-4659-b115-33166aa8cbe7.jpg)
+
+
+
+
 
