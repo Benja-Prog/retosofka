@@ -62,6 +62,15 @@ Luego de esto en la próxima ventana vamos a dar click donde dice SELECCIONAR AR
 
 ![CARGAR BASE DE DATOS](https://user-images.githubusercontent.com/69724829/217060981-a4984f7e-32bd-4659-b115-33166aa8cbe7.jpg)
 
+Aqui debes buscar el archivo de base de datos donde sea que lo hayas descargado.
+
+![CARGAR BASE DE DATOS 2](https://user-images.githubusercontent.com/69724829/217061993-658e35f9-bf82-4270-b761-0e665d04be0d.jpg)
+
+Si todo Salio bien, debe haber quedado la base de datos con sus respectivas tablas. asi como se ve aqui.
+
+![base de datos lista](https://user-images.githubusercontent.com/69724829/217062592-2effed7c-297d-458d-b6f2-ec9f5370a8e3.jpg)
+
+
 
 
 
