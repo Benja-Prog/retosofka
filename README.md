@@ -37,6 +37,8 @@ Con todo listo en materia de descargas y sus respectivas instalaciones, vamos ah
 ![abrir terminal](https://user-images.githubusercontent.com/69724829/217053876-3375ed76-b2c3-4f53-b03a-69b87d7adc5c.jpg)
 
 3. Una vez en el terminal copia lo siguiente. "git clone https://github.com/Benja-Prog/retosofka.git" por supuesto sin comillas y das enter.
+![clonar](https://user-images.githubusercontent.com/69724829/217055778-25fa1cd6-8082-46f9-b71f-3f92bf0c49b2.jpg)
+
 4. 
 
 
